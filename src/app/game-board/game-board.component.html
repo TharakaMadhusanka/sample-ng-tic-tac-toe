@@ -1,0 +1,33 @@
+<div class="row mb-4">
+    <div class="col-8">
+        <div class="game-board bg-">
+            <app-square  *ngFor="let label of gridSquares; let i = index" class=" card"
+            [player]="label" 
+            (click)="onPlayerClick(i)"></app-square>
+        </div>
+    </div>
+    <div class="col-4 p-3 bg-danger">
+            <div class="row">
+                <div class="col-12 text-center text-white">
+                    <h1  *ngIf="!winner && !isDrawn">Next turn for&nbsp;<span class="text-warning"> {{ currentPlayer }} </span></h1>
+                    <h1  *ngIf="winner"><strong>Congratulations!</strong></h1>
+                    <h1  *ngIf="isDrawn" ><strong>Oopz! Tie</strong></h1>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <img src="{{displayImagePath}}" class="img-fluid rounded-4" alt="Congratulations">
+                </div>
+            </div>
+            <div class="row mt-4"  *ngIf="winner">
+                <div class="col-12 text-center">
+                    <h1 class="text-white"><strong>{{winner}} won the game</strong></h1>
+                </div>
+            </div>
+            <div class="row mt-4 text-center"  *ngIf="winner || isDrawn">
+                <div class="col-12">
+                    <button class="btn btn-success btn-lg" (click)="playAgain()">Play Again !</button>
+                </div>
+            </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+app-square  {
+    border: 1px gray solid;
+    height: 35vh;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 0px;
+}
