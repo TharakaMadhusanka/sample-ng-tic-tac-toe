@@ -6,14 +6,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Here, this Tic Tac Toe grid is numbered each cell starting from 0. 
 And checked the different index path patterns (index combinations) which a player can win.
-0	1	2
-3	4	5
-6	7	8
+
+![image](https://user-images.githubusercontent.com/7240672/168510391-e0dbcd6e-cbfd-40e6-947d-69aeab73bb62.png)
+
+
 
 Ways to Win,
-x	x	X
-X	X	X
-X	X	X
+
+
+![image](https://user-images.githubusercontent.com/7240672/168510331-fadcc1cc-7001-4fbb-84a7-9e6e43fc91be.png)
 
 To win, a player can be stepped as below,
 
