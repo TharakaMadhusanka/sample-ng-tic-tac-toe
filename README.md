@@ -1,6 +1,34 @@
 # SampleAngularTicTacToe
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11 & Bootstrap 5.1.3
+
+## Algorithm
+
+Here, this Tic Tac Toe grid is numbered each cell starting from 0. 
+And checked the different index path patterns (index combinations) which a player can win.
+0	1	2
+3	4	5
+6	7	8
+
+Ways to Win,
+x	x	X
+X	X	X
+X	X	X
+
+To win, a player can be stepped as below,
+
+[0,1,2], [3,4,5], [6,7,8] = As rows
+[0,3,6], [1,4,7], [2,5,8] = As columns
+[0,4,8], [2,4,6] = Diagonally
+
+When a player stepped as above then he wins. 
+
+When check each wining path, can see that, in a winning path it has 3 nodes, and all 3 nodes should have the same value.
+
+In any way, if a player matches one of the above paths, then he wins.
+
+This is the core concept used to develop the Algorithm. 
+
 
 ## Development server
 
