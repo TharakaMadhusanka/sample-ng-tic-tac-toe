@@ -40,16 +40,16 @@ export class GameBoardComponent implements OnInit {
   }
 
   winOrLose(): void {
+    let equalAdjecents = null;
     this.winningIndexPatterns.forEach((path: number[]) => {
       const [x, y, z] = path;
-      const equalAdjecents = this.gridSquares[x] && (this.gridSquares[x] === this.gridSquares[y]) && (this.gridSquares[x] === this.gridSquares[z]);
+      equalAdjecents = this.gridSquares[x] && (this.gridSquares[x] === this.gridSquares[y]) && (this.gridSquares[x] === this.gridSquares[z]);
       if (equalAdjecents) { this.winner = this.gridSquares[x]; this.displayImagePath = "../../assets/Winner.gif"; return;}
-      this.isGameOver();
     });
+    if (!equalAdjecents) this.isGameOver();
   }
 
   isGameOver(): void {
-    console.log(this.winner);
     this.isDrawn = (this.totalClicks === this.gridSize && !this.winner);
     if (this.isDrawn) this.displayImagePath = "../assets/game-tie.gif";
   }
